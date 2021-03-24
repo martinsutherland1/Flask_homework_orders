@@ -8,6 +8,11 @@ from app.models.customer_orders import orders
 def index():
     return render_template('index.html', title="Home", orders=orders)
 
+@app.route('/orders/<index>')
+def show(index):
+    return render_template('show.html', order=orders[int(index)])
+    
+
 
 
 

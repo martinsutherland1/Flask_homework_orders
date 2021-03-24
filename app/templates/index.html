@@ -11,7 +11,7 @@
     {% for order in orders %}
     <div>
         <p>
-            {{ order.name}}: <b>{{ order.date }}</b> {{ order.item }} {{ order.quantity }}
+            {{ order.name}}: <a href="/orders/{{orders.index(order)}}">Show Order</a>
         </p>
     </div>
     {% endfor %}
